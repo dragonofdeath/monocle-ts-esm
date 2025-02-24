@@ -2,8 +2,8 @@
  * @since 1.2.0
  */
 import { Index, Optional } from '..'
-import { lookup, updateAt } from 'fp-ts/lib/Array'
-import { isNone } from 'fp-ts/lib/Option'
+import { lookup, updateAt } from 'fp-ts-esm/Array'
+import { isNone } from 'fp-ts-esm/Option'
 
 /**
  * @category constructor

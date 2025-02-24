@@ -1,6 +1,6 @@
 import * as assert from 'assert'
-import { identity } from 'fp-ts/lib/function'
-import * as O from 'fp-ts/lib/Option'
+import { identity } from 'fp-ts-esm/function'
+import * as O from 'fp-ts-esm/Option'
 import { Optional } from '../../src'
 import * as U from '../util'
 

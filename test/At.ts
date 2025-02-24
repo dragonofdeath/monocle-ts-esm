@@ -1,7 +1,7 @@
 import * as assert from 'assert'
 import * as _ from '../src/At'
-import * as O from 'fp-ts/lib/Option'
-import { eqString } from 'fp-ts/lib/Eq'
+import * as O from 'fp-ts-esm/Option'
+import { eqString } from 'fp-ts-esm/Eq'
 import * as U from './util'
 
 describe('At', () => {

@@ -1,8 +1,8 @@
 /**
  * @since 2.2.0
  */
-import { Option } from 'fp-ts/lib/Option'
-import { ReadonlyRecord } from 'fp-ts/lib/ReadonlyRecord'
+import { Option } from 'fp-ts-esm/Option'
+import { ReadonlyRecord } from 'fp-ts-esm/ReadonlyRecord'
 import { At } from '..'
 import * as R from './Record'
 

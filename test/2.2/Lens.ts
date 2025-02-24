@@ -1,6 +1,6 @@
 import { Lens } from '../../src'
 import * as assert from 'assert'
-import { identity } from 'fp-ts/lib/function'
+import { identity } from 'fp-ts-esm/function'
 import * as U from '../util'
 
 interface Street {

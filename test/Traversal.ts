@@ -1,12 +1,12 @@
 import * as _ from '../src/Traversal'
-import * as A from 'fp-ts/lib/ReadonlyArray'
-import * as Id from 'fp-ts/lib/Identity'
-import * as O from 'fp-ts/lib/Option'
-import { pipe } from 'fp-ts/lib/pipeable'
-import { monoidSum } from 'fp-ts/lib/Monoid'
+import * as A from 'fp-ts-esm/ReadonlyArray'
+import * as Id from 'fp-ts-esm/Identity'
+import * as O from 'fp-ts-esm/Option'
+import { pipe } from 'fp-ts-esm/pipeable'
+import { monoidSum } from 'fp-ts-esm/Monoid'
 import * as U from './util'
-import { ReadonlyRecord } from 'fp-ts/lib/ReadonlyRecord'
-import * as RNEA from 'fp-ts/lib/ReadonlyNonEmptyArray'
+import { ReadonlyRecord } from 'fp-ts-esm/ReadonlyRecord'
+import * as RNEA from 'fp-ts-esm/ReadonlyNonEmptyArray'
 
 describe('Traversal', () => {
   describe('instances', () => {

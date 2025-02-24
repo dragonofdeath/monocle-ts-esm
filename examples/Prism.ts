@@ -1,5 +1,5 @@
 import { Prism } from '../src'
-import { Option, some, none } from 'fp-ts/lib/Option'
+import { Option, some, none } from 'fp-ts-esm/Option'
 
 class JStr {
   constructor(public readonly value: string) {}

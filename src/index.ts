@@ -1,15 +1,15 @@
 /**
  * @since 1.0.0
  */
-import * as A from 'fp-ts/lib/Array'
-import { getApplicative, make } from 'fp-ts/lib/Const'
-import { Foldable, Foldable1, Foldable2, Foldable3 } from 'fp-ts/lib/Foldable'
-import { constant, identity, Predicate, Refinement } from 'fp-ts/lib/function'
-import { HKT, Kind, Kind2, Kind3, URIS, URIS2, URIS3 } from 'fp-ts/lib/HKT'
-import { Monoid, monoidAll, monoidAny } from 'fp-ts/lib/Monoid'
-import { fromNullable, fromPredicate, getFirstMonoid, isNone, Option, option, some } from 'fp-ts/lib/Option'
-import { pipe } from 'fp-ts/lib/pipeable'
-import { Traversable, Traversable1, Traversable2, Traversable3 } from 'fp-ts/lib/Traversable'
+import * as A from 'fp-ts-esm/Array'
+import { getApplicative, make } from 'fp-ts-esm/Const'
+import { Foldable, Foldable1, Foldable2, Foldable3 } from 'fp-ts-esm/Foldable'
+import { constant, identity, Predicate, Refinement } from 'fp-ts-esm/function'
+import { HKT, Kind, Kind2, Kind3, URIS, URIS2, URIS3 } from 'fp-ts-esm/HKT'
+import { Monoid, monoidAll, monoidAny } from 'fp-ts-esm/Monoid'
+import { fromNullable, fromPredicate, getFirstMonoid, isNone, Option, option, some } from 'fp-ts-esm/Option'
+import { pipe } from 'fp-ts-esm/pipeable'
+import { Traversable, Traversable1, Traversable2, Traversable3 } from 'fp-ts-esm/Traversable'
 import * as at from './At'
 import * as iso from './Iso'
 import * as index from './Ix'
@@ -606,6 +606,7 @@ export class Prism<S, A> {
   modifyOption(f: (a: A) => A): (s: S) => Option<S> {
     return (s) =>
       option.map(this.getOption(s), (v) => {
+        // @ts-expect-error
         const n = f(v)
         return n === v ? s : this.reverseGet(n)
       })

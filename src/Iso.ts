@@ -14,18 +14,18 @@
  *
  * @since 2.3.0
  */
-import { Category2 } from 'fp-ts/lib/Category'
-import { Either } from 'fp-ts/lib/Either'
-import { flow, identity, Predicate, Refinement } from 'fp-ts/lib/function'
-import { Functor, Functor1, Functor2, Functor3 } from 'fp-ts/lib/Functor'
-import { HKT, Kind, Kind2, Kind3, URIS, URIS2, URIS3 } from 'fp-ts/lib/HKT'
-import { Invariant2 } from 'fp-ts/lib/Invariant'
-import { Option } from 'fp-ts/lib/Option'
-import { pipe } from 'fp-ts/lib/pipeable'
-import { ReadonlyNonEmptyArray } from 'fp-ts/lib/ReadonlyNonEmptyArray'
-import { ReadonlyRecord } from 'fp-ts/lib/ReadonlyRecord'
-import { Semigroupoid2 } from 'fp-ts/lib/Semigroupoid'
-import { Traversable1 } from 'fp-ts/lib/Traversable'
+import { Category2 } from 'fp-ts-esm/Category'
+import { Either } from 'fp-ts-esm/Either'
+import { flow, identity, Predicate, Refinement } from 'fp-ts-esm/function'
+import { Functor, Functor1, Functor2, Functor3 } from 'fp-ts-esm/Functor'
+import { HKT, Kind, Kind2, Kind3, URIS, URIS2, URIS3 } from 'fp-ts-esm/HKT'
+import { Invariant2 } from 'fp-ts-esm/Invariant'
+import { Option } from 'fp-ts-esm/Option'
+import { pipe } from 'fp-ts-esm/pipeable'
+import { ReadonlyNonEmptyArray } from 'fp-ts-esm/ReadonlyNonEmptyArray'
+import { ReadonlyRecord } from 'fp-ts-esm/ReadonlyRecord'
+import { Semigroupoid2 } from 'fp-ts-esm/Semigroupoid'
+import { Traversable1 } from 'fp-ts-esm/Traversable'
 import * as _ from './internal'
 import { Lens } from './Lens'
 import { Optional } from './Optional'
@@ -370,7 +370,7 @@ export const URI = 'monocle-ts/Iso'
  */
 export type URI = typeof URI
 
-declare module 'fp-ts/lib/HKT' {
+declare module 'fp-ts-esm/HKT' {
   interface URItoKind2<E, A> {
     readonly [URI]: Iso<E, A>
   }

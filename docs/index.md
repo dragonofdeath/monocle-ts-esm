@@ -121,7 +121,7 @@ optional as a `string` can be empty. So we need another abstraction that would b
 
 ```ts
 import { Optional } from 'monocle-ts'
-import { some, none } from 'fp-ts/lib/Option'
+import { some, none } from 'fp-ts-esm/Option'
 
 const firstLetter = new Optional<string, string>(s => (s.length > 0 ? some(s[0]) : none), a => s => a + s.substring(1))
 

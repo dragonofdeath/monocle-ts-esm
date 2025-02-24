@@ -7,18 +7,18 @@
  *
  * @since 2.3.0
  */
-import * as O from 'fp-ts/lib/Option'
-import { pipe } from 'fp-ts/lib/pipeable'
+import * as O from 'fp-ts-esm/Option'
+import { pipe } from 'fp-ts-esm/pipeable'
 import { At } from './At'
 import * as _ from './internal'
 import { Iso } from './Iso'
 import { Optional } from './Optional'
-import * as RM from 'fp-ts/lib/ReadonlyMap'
-import { Eq } from 'fp-ts/lib/Eq'
+import * as RM from 'fp-ts-esm/ReadonlyMap'
+import { Eq } from 'fp-ts-esm/Eq'
 
 import Option = O.Option
-import { ReadonlyRecord } from 'fp-ts/lib/ReadonlyRecord'
-import { ReadonlyNonEmptyArray } from 'fp-ts/lib/ReadonlyNonEmptyArray'
+import { ReadonlyRecord } from 'fp-ts-esm/ReadonlyRecord'
+import { ReadonlyNonEmptyArray } from 'fp-ts-esm/ReadonlyNonEmptyArray'
 
 // -------------------------------------------------------------------------------------
 // model

@@ -1,6 +1,6 @@
 import { _right, _left } from '../../src/Either'
-import { right, left } from 'fp-ts/lib/Either'
-import { some, none } from 'fp-ts/lib/Option'
+import { right, left } from 'fp-ts-esm/Either'
+import { some, none } from 'fp-ts-esm/Option'
 import * as U from '../util'
 
 describe('Either', () => {

@@ -1,6 +1,6 @@
 import { Prism } from '../../src'
-import { Refinement } from 'fp-ts/lib/function'
-import { none, some, Option } from 'fp-ts/lib/Option'
+import { Refinement } from 'fp-ts-esm/function'
+import { none, some, Option } from 'fp-ts-esm/Option'
 import * as U from '../util'
 
 interface A {

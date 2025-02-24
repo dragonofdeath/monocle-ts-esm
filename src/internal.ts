@@ -7,16 +7,16 @@
  *
  * @since 2.3.0
  */
-import { Applicative, Applicative1 } from 'fp-ts/lib/Applicative'
-import * as RA from 'fp-ts/lib/ReadonlyArray'
-import * as RNEA from 'fp-ts/lib/ReadonlyNonEmptyArray'
-import * as RR from 'fp-ts/lib/ReadonlyRecord'
-import { constant, flow, identity, Predicate } from 'fp-ts/lib/function'
-import { HKT, Kind, Kind2, Kind3, URIS, URIS2, URIS3 } from 'fp-ts/lib/HKT'
-import * as O from 'fp-ts/lib/Option'
-import * as E from 'fp-ts/lib/Either'
-import { pipe } from 'fp-ts/lib/pipeable'
-import { Traversable, Traversable1, Traversable2, Traversable3 } from 'fp-ts/lib/Traversable'
+import { Applicative, Applicative1 } from 'fp-ts-esm/Applicative'
+import * as RA from 'fp-ts-esm/ReadonlyArray'
+import * as RNEA from 'fp-ts-esm/ReadonlyNonEmptyArray'
+import * as RR from 'fp-ts-esm/ReadonlyRecord'
+import { constant, flow, identity, Predicate } from 'fp-ts-esm/function'
+import { HKT, Kind, Kind2, Kind3, URIS, URIS2, URIS3 } from 'fp-ts-esm/HKT'
+import * as O from 'fp-ts-esm/Option'
+import * as E from 'fp-ts-esm/Either'
+import { pipe } from 'fp-ts-esm/pipeable'
+import { Traversable, Traversable1, Traversable2, Traversable3 } from 'fp-ts-esm/Traversable'
 import { Iso } from './Iso'
 import { Index } from './Ix'
 import { Lens } from './Lens'
@@ -24,8 +24,8 @@ import { Optional } from './Optional'
 import { Prism } from './Prism'
 import { Traversal } from './Traversal'
 import { At } from './At'
-import { NonEmptyArray } from 'fp-ts/lib/NonEmptyArray'
-import { URI as IURI } from 'fp-ts/lib/Identity'
+import { NonEmptyArray } from 'fp-ts-esm/NonEmptyArray'
+import { URI as IURI } from 'fp-ts-esm/Identity'
 
 // -------------------------------------------------------------------------------------
 // Iso
@@ -50,6 +50,7 @@ export const isoAsOptional = <S, A>(sa: Iso<S, A>): Optional<S, A> =>
 /** @internal */
 export const isoAsTraversal = <S, A>(sa: Iso<S, A>): Traversal<S, A> =>
   traversal(<F>(F: Applicative<F>) => (f: (a: A) => HKT<F, A>) => (s: S) =>
+    // @ts-expect-error
     F.map(f(sa.get(s)), (a) => sa.reverseGet(a))
   )
 
@@ -65,6 +66,7 @@ export const lensAsOptional = <S, A>(sa: Lens<S, A>): Optional<S, A> => optional
 
 /** @internal */
 export const lensAsTraversal = <S, A>(sa: Lens<S, A>): Traversal<S, A> =>
+        // @ts-expect-error
   traversal(<F>(F: Applicative<F>) => (f: (a: A) => HKT<F, A>) => (s: S) => F.map(f(sa.get(s)), (a) => sa.set(a)(s)))
 
 /** @internal */
@@ -163,6 +165,7 @@ export const prismAsTraversal = <S, A>(sa: Prism<S, A>): Traversal<S, A> =>
       sa.getOption(s),
       O.fold(
         () => F.of(s),
+        // @ts-expect-error
         (a) => F.map(f(a), (a) => prismSet(a)(sa)(s))
       )
     )

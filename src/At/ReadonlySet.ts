@@ -1,7 +1,7 @@
 /**
  * @since 2.2.0
  */
-import { Eq } from 'fp-ts/lib/Eq'
+import { Eq } from 'fp-ts-esm/Eq'
 import { At } from '..'
 import * as S from './Set'
 

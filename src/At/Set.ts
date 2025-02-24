@@ -2,8 +2,8 @@
  * @since 1.2.0
  */
 import { At, Lens } from '..'
-import { Eq } from 'fp-ts/lib/Eq'
-import * as S from 'fp-ts/lib/Set'
+import { Eq } from 'fp-ts-esm/Eq'
+import * as S from 'fp-ts-esm/Set'
 
 /**
  * @category constructor

@@ -1,7 +1,7 @@
 /**
  * @since 2.2.0
  */
-import { ReadonlyRecord } from 'fp-ts/lib/ReadonlyRecord'
+import { ReadonlyRecord } from 'fp-ts-esm/ReadonlyRecord'
 import { Index } from '..'
 import * as R from './Record'
 

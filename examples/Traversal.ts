@@ -1,5 +1,5 @@
 import { fromTraversable } from '../src'
-import { array } from 'fp-ts/lib/Array'
+import { array } from 'fp-ts-esm/Array'
 
 const eachL = fromTraversable(array)<number>()
 

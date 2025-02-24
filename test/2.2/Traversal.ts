@@ -1,6 +1,6 @@
 import { Lens, fromTraversable } from '../../src'
-import { array } from 'fp-ts/lib/Array'
-import { Option, isSome, some, Some } from 'fp-ts/lib/Option'
+import { array } from 'fp-ts-esm/Array'
+import { Option, isSome, some, Some } from 'fp-ts-esm/Option'
 import * as U from '../util'
 
 describe('Traversal', () => {

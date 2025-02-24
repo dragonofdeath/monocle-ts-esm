@@ -1,5 +1,5 @@
-import * as TE from 'fp-ts/lib/TaskEither'
-import { flow } from 'fp-ts/lib/function'
+import * as TE from 'fp-ts-esm/TaskEither'
+import { flow } from 'fp-ts-esm/function'
 import * as fs from 'fs'
 import * as G from 'glob'
 
@@ -14,7 +14,7 @@ export interface FileSystem {
 const readFile = TE.taskify<fs.PathLike, string, NodeJS.ErrnoException, string>(fs.readFile)
 const writeFile = TE.taskify<fs.PathLike, string, NodeJS.ErrnoException, void>(fs.writeFile)
 const copyFile = TE.taskify<fs.PathLike, fs.PathLike, NodeJS.ErrnoException, void>(fs.copyFile)
-const glob = TE.taskify<string, Error, ReadonlyArray<string>>(G)
+const glob = TE.taskify<string, Error, ReadonlyArray<string>>(G.glob)
 const mkdirTE = TE.taskify(fs.mkdir)
 
 export const fileSystem: FileSystem = {

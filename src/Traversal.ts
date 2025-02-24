@@ -13,20 +13,20 @@
  *
  * @since 2.3.0
  */
-import { Applicative, Applicative1, Applicative2, Applicative2C, Applicative3 } from 'fp-ts/lib/Applicative'
-import { Category2 } from 'fp-ts/lib/Category'
-import * as C from 'fp-ts/lib/Const'
-import { Either } from 'fp-ts/lib/Either'
-import { flow, identity, Predicate, Refinement } from 'fp-ts/lib/function'
-import { HKT, Kind, Kind2, Kind3, URIS, URIS2, URIS3 } from 'fp-ts/lib/HKT'
-import { Monoid } from 'fp-ts/lib/Monoid'
-import { Option } from 'fp-ts/lib/Option'
-import { pipe } from 'fp-ts/lib/pipeable'
-import * as RA from 'fp-ts/lib/ReadonlyArray'
-import { ReadonlyNonEmptyArray } from 'fp-ts/lib/ReadonlyNonEmptyArray'
-import { ReadonlyRecord } from 'fp-ts/lib/ReadonlyRecord'
-import { Semigroupoid2 } from 'fp-ts/lib/Semigroupoid'
-import { Traversable, Traversable1, Traversable2, Traversable3 } from 'fp-ts/lib/Traversable'
+import { Applicative, Applicative1, Applicative2, Applicative2C, Applicative3 } from 'fp-ts-esm/Applicative'
+import { Category2 } from 'fp-ts-esm/Category'
+import * as C from 'fp-ts-esm/Const'
+import { Either } from 'fp-ts-esm/Either'
+import { flow, identity, Predicate, Refinement } from 'fp-ts-esm/function'
+import { HKT, Kind, Kind2, Kind3, URIS, URIS2, URIS3 } from 'fp-ts-esm/HKT'
+import { Monoid } from 'fp-ts-esm/Monoid'
+import { Option } from 'fp-ts-esm/Option'
+import { pipe } from 'fp-ts-esm/pipeable'
+import * as RA from 'fp-ts-esm/ReadonlyArray'
+import { ReadonlyNonEmptyArray } from 'fp-ts-esm/ReadonlyNonEmptyArray'
+import { ReadonlyRecord } from 'fp-ts-esm/ReadonlyRecord'
+import { Semigroupoid2 } from 'fp-ts-esm/Semigroupoid'
+import { Traversable, Traversable1, Traversable2, Traversable3 } from 'fp-ts-esm/Traversable'
 import * as _ from './internal'
 import { Iso } from './Iso'
 import { Lens } from './Lens'
@@ -358,7 +358,7 @@ export const URI = 'monocle-ts/Traversal'
  */
 export type URI = typeof URI
 
-declare module 'fp-ts/lib/HKT' {
+declare module 'fp-ts-esm/HKT' {
   interface URItoKind2<E, A> {
     readonly [URI]: Traversal<E, A>
   }

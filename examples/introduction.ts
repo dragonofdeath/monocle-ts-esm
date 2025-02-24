@@ -56,7 +56,7 @@ const address = Lens.fromProp<Company>()('address')
 const street = Lens.fromProp<Address>()('street')
 const name = Lens.fromProp<Street>()('name')
 
-import { some, none } from 'fp-ts/lib/Option'
+import { some, none } from 'fp-ts-esm/Option'
 
 const firstLetter = new Optional<string, string>(
   (s) => (s.length > 0 ? some(s[0]) : none),

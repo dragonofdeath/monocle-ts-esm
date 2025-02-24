@@ -1,12 +1,12 @@
 import * as path from 'path'
-import * as E from 'fp-ts/lib/Either'
-import { pipe } from 'fp-ts/lib/pipeable'
-import * as RTE from 'fp-ts/lib/ReaderTaskEither'
-import * as A from 'fp-ts/lib/ReadonlyArray'
-import * as TE from 'fp-ts/lib/TaskEither'
+import * as E from 'fp-ts-esm/Either'
+import { pipe } from 'fp-ts-esm/pipeable'
+import * as RTE from 'fp-ts-esm/ReaderTaskEither'
+import * as A from 'fp-ts-esm/ReadonlyArray'
+import * as TE from 'fp-ts-esm/TaskEither'
 import { FileSystem, fileSystem } from './FileSystem'
 import { run } from './run'
-import * as O from 'fp-ts/lib/Option'
+import * as O from 'fp-ts-esm/Option'
 
 interface Build<A> extends RTE.ReaderTaskEither<FileSystem, Error, A> {}
 
@@ -32,6 +32,7 @@ export const copyPackageJson: Build<void> = (C) =>
 export const FILES: ReadonlyArray<string> = ['CHANGELOG.md', 'LICENSE', 'README.md']
 
 export const copyFiles: Build<ReadonlyArray<void>> = (C) =>
+  // @ts-expect-error
   A.readonlyArray.traverse(TE.taskEither)(FILES, (from) => C.copyFile(from, path.resolve(OUTPUT_FOLDER, from)))
 
 const traverse = A.readonlyArray.traverse(TE.taskEither)

@@ -1,5 +1,5 @@
 import { Lens, Optional, Prism } from '../src'
-import { Option, some, none } from 'fp-ts/lib/Option'
+import { Option, some, none } from 'fp-ts-esm/Option'
 import { nameLens, employee } from './Lens'
 
 const head = new Optional<string, string>(

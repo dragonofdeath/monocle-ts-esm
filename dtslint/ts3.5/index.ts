@@ -1,6 +1,6 @@
 import { Lens, Optional, fromFoldable } from '../../src'
-import { Option } from 'fp-ts/lib/Option'
-import { array } from 'fp-ts/lib/Array'
+import { Option } from 'fp-ts-esm/Option'
+import { array } from 'fp-ts-esm/Array'
 
 interface Person {
   name: string
@@ -139,7 +139,7 @@ fold.find(isB)(s) // $ExpectType Option<B>
 
 import * as ARR from '../../src/At/ReadonlyRecord'
 import * as RS from '../../src/At/ReadonlySet'
-import { eqString } from 'fp-ts/lib/Eq'
+import { eqString } from 'fp-ts-esm/Eq'
 
 ARR.atReadonlyRecord<string>().at('a') // $ExpectType Lens<Readonly<Record<string, string>>, Option<string>>
 

@@ -7,12 +7,12 @@
  *
  * @since 2.3.0
  */
-import { Eq } from 'fp-ts/lib/Eq'
-import * as O from 'fp-ts/lib/Option'
-import { pipe } from 'fp-ts/lib/pipeable'
-import * as RM from 'fp-ts/lib/ReadonlyMap'
-import { ReadonlyRecord } from 'fp-ts/lib/ReadonlyRecord'
-import * as RS from 'fp-ts/lib/ReadonlySet'
+import { Eq } from 'fp-ts-esm/Eq'
+import * as O from 'fp-ts-esm/Option'
+import { pipe } from 'fp-ts-esm/pipeable'
+import * as RM from 'fp-ts-esm/ReadonlyMap'
+import { ReadonlyRecord } from 'fp-ts-esm/ReadonlyRecord'
+import * as RS from 'fp-ts-esm/ReadonlySet'
 import * as _ from './internal'
 import { Iso } from './Iso'
 import { Lens } from './Lens'

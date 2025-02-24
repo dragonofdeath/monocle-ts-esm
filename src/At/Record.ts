@@ -2,8 +2,8 @@
  * @since 1.7.0
  */
 import { At, Lens } from '..'
-import { Option, isNone } from 'fp-ts/lib/Option'
-import * as R from 'fp-ts/lib/Record'
+import { Option, isNone } from 'fp-ts-esm/Option'
+import * as R from 'fp-ts-esm/Record'
 
 /**
  * @category constructor

@@ -1,14 +1,14 @@
 import * as assert from 'assert'
 import * as _ from '../src/Lens'
-import { pipe } from 'fp-ts/lib/pipeable'
-import * as O from 'fp-ts/lib/Option'
-import * as A from 'fp-ts/lib/ReadonlyArray'
+import { pipe } from 'fp-ts-esm/pipeable'
+import * as O from 'fp-ts-esm/Option'
+import * as A from 'fp-ts-esm/ReadonlyArray'
 import * as T from '../src/Traversal'
 import * as Op from '../src/Optional'
-import * as Id from 'fp-ts/lib/Identity'
+import * as Id from 'fp-ts-esm/Identity'
 import * as U from './util'
-import { ReadonlyRecord } from 'fp-ts/lib/ReadonlyRecord'
-import { ReadonlyNonEmptyArray } from 'fp-ts/lib/ReadonlyNonEmptyArray'
+import { ReadonlyRecord } from 'fp-ts-esm/ReadonlyRecord'
+import { ReadonlyNonEmptyArray } from 'fp-ts-esm/ReadonlyNonEmptyArray'
 
 describe('Lens', () => {
   describe('pipeables', () => {

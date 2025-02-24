@@ -1,6 +1,6 @@
 import { Getter, fromFoldable } from '../../src'
-import { some, none } from 'fp-ts/lib/Option'
-import { array } from 'fp-ts/lib/Array'
+import { some, none } from 'fp-ts-esm/Option'
+import { array } from 'fp-ts-esm/Array'
 import * as U from '../util'
 
 type Point = {

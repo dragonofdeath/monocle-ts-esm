@@ -1,8 +1,8 @@
 /**
  * @since 1.6.0
  */
-import { Either, right, left, fold } from 'fp-ts/lib/Either'
-import { fromEither, none, some } from 'fp-ts/lib/Option'
+import { Either, right, left, fold } from 'fp-ts-esm/Either'
+import { fromEither, none, some } from 'fp-ts-esm/Option'
 import { Prism } from '.'
 
 const r = new Prism<Either<any, any>, any>(fromEither, right)

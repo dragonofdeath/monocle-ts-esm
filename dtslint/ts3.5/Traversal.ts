@@ -1,5 +1,5 @@
 import * as T from '../../src/Traversal'
-import { pipe } from 'fp-ts/lib/pipeable'
+import { pipe } from 'fp-ts-esm/pipeable'
 
 interface A {
   a: string

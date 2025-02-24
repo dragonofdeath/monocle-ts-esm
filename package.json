@@ -15,17 +15,15 @@
     "test": "npm run prettier && npm run lint && npm run dtslint && npm run jest && npm run docs",
     "clean": "rm -rf ./dist",
     "prebuild": "npm run clean",
-    "build": "tsc -p ./tsconfig.build.json && tsc -p ./tsconfig.build-es6.json && npm run import-path-rewrite && ts-node scripts/build",
+    "build": "tsc -p ./tsconfig.build.json && tsc -p ./tsconfig.build-es6.json && tsx scripts/build",
     "postbuild": "prettier --loglevel=silent --write \"./dist/**/*.ts\"",
     "prepublishOnly": "ts-node scripts/pre-publish",
     "docs-fix-prettier": "prettier --no-semi --single-quote --print-width 120 --parser markdown --write \"README.md\"",
     "dtslint": "dtslint dtslint",
     "mocha": "TS_NODE_CACHE=false mocha -r ts-node/register test/**/*.ts",
-    "docs": "docs-ts",
     "prerelease": "npm run build",
     "release": "ts-node scripts/release",
-    "release-as-next": "ts-node scripts/release-as-next",
-    "import-path-rewrite": "import-path-rewrite"
+    "release-as-next": "ts-node scripts/release-as-next"
   },
   "repository": {
     "type": "git",
@@ -38,7 +36,7 @@
   },
   "homepage": "https://github.com/gcanti/monocle-ts",
   "peerDependencies": {
-    "fp-ts": "^2.5.0"
+    "fp-ts-esm": "^2.16.9"
   },
   "devDependencies": {
     "@types/benchmark": "^2.1.0",
@@ -46,10 +44,8 @@
     "@types/jest": "22.2.2",
     "@types/node": "^13.11.0",
     "benchmark": "^2.1.4",
-    "docs-ts": "^0.6.2",
     "dtslint": "github:gcanti/dtslint",
-    "fp-ts": "^2.9.5",
-    "import-path-rewrite": "github:gcanti/import-path-rewrite",
+    "fp-ts-esm": "^2.16.9",
     "jest": "^24.3.0",
     "mocha": "^5.2.0",
     "optics-ts": "^2.1.0",
@@ -58,10 +54,11 @@
     "rimraf": "^2.6.3",
     "ts-jest": "^24.0.0",
     "ts-node": "^8.0.2",
+    "tsx": "^4.19.3",
     "tslint": "^5.12.1",
     "tslint-config-standard": "^8.0.1",
     "tslint-immutable": "^6.0.1",
-    "typescript": "^4.6.2"
+    "typescript": "5.2.2"
   },
   "tags": [
     "typescript",
