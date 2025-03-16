@@ -30,11 +30,11 @@ import { ReadonlyNonEmptyArray } from 'fp-ts-esm/ReadonlyNonEmptyArray'
 import { ReadonlyRecord } from 'fp-ts-esm/ReadonlyRecord'
 import { Semigroupoid2 } from 'fp-ts-esm/Semigroupoid'
 import { Traversable1 } from 'fp-ts-esm/Traversable'
-import * as _ from './internal'
-import { Iso } from './Iso'
-import { Optional } from './Optional'
-import { Prism } from './Prism'
-import { Traversal } from './Traversal'
+import * as _ from './internal.js'
+import { Iso } from './Iso.js'
+import { Optional } from './Optional.js'
+import { Prism } from './Prism.js'
+import { Traversal } from './Traversal.js'
 
 // -------------------------------------------------------------------------------------
 // model

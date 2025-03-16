@@ -3,7 +3,7 @@
  */
 import { Either, right, left, fold } from 'fp-ts-esm/Either'
 import { fromEither, none, some } from 'fp-ts-esm/Option'
-import { Prism } from '.'
+import { Prism } from './index.js'
 
 const r = new Prism<Either<any, any>, any>(fromEither, right)
 

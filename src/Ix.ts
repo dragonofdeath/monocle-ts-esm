@@ -9,10 +9,10 @@
  */
 import * as O from 'fp-ts-esm/Option'
 import { pipe } from 'fp-ts-esm/pipeable'
-import { At } from './At'
-import * as _ from './internal'
-import { Iso } from './Iso'
-import { Optional } from './Optional'
+import { At } from './At.js'
+import * as _ from './internal.js'
+import { Iso } from './Iso.js'
+import { Optional } from './Optional.js'
 import * as RM from 'fp-ts-esm/ReadonlyMap'
 import { Eq } from 'fp-ts-esm/Eq'
 

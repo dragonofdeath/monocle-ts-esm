@@ -15,7 +15,7 @@
     "test": "npm run prettier && npm run lint && npm run dtslint && npm run jest && npm run docs",
     "clean": "rm -rf ./dist",
     "prebuild": "npm run clean",
-    "build": "tsc -p ./tsconfig.build.json && tsc -p ./tsconfig.build-es6.json && tsx scripts/build",
+    "build": "tsc -p ./tsconfig.build.json && tsc -p ./tsconfig.build-es6.json && echo \"{ \\\"type\\\": \\\"module\\\" }\" > dist/es6/package.json && tsx scripts/build",
     "postbuild": "prettier --loglevel=silent --write \"./dist/**/*.ts\"",
     "prepublishOnly": "ts-node scripts/pre-publish",
     "docs-fix-prettier": "prettier --no-semi --single-quote --print-width 120 --parser markdown --write \"README.md\"",
@@ -28,6 +28,68 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/gcanti/monocle-ts.git"
+  },
+  "exports": {
+    ".": {
+      "import": "./es6/index.js",
+      "require": "./lib/index.js",
+      "types": "./es6/index.d.ts"
+    },
+    "./lib": {
+      "import": "./es6/index.js",
+      "require": "./lib/index.js",
+      "types": "./es6/index.d.ts"
+    },
+    "./es6": {
+      "import": "./es6/index.js",
+      "require": "./lib/index.js",
+      "types": "./es6/index.d.ts"
+    },
+    "./At": {
+      "import": "./es6/At.js",
+      "require": "./lib/At.js",
+      "types": "./es6/At.d.ts"
+    },
+    "./Either": {
+      "import": "./es6/Either.js",
+      "require": "./lib/Either.js",
+      "types": "./es6/Either.d.ts"
+    },
+    "./Index": {
+      "import": "./es6/Index.js",
+      "require": "./lib/Index.js",
+      "types": "./es6/Index.d.ts"
+    },
+    "./Iso": {
+      "import": "./es6/Iso.js",
+      "require": "./lib/Iso.js",
+      "types": "./es6/Iso.d.ts"
+    },
+    "./Ix": {
+      "import": "./es6/Ix.js",
+      "require": "./lib/Ix.js",
+      "types": "./es6/Ix.d.ts"
+    },
+    "./Lens": {
+      "import": "./es6/Lens.js",
+      "require": "./lib/Lens.js",
+      "types": "./es6/Lens.d.ts"
+    },
+    "./Optional": {
+      "import": "./es6/Optional.js",
+      "require": "./lib/Optional.js",
+      "types": "./es6/Optional.d.ts"
+    },
+    "./Prism": {
+      "import": "./es6/Prism.js",
+      "require": "./lib/Prism.js",
+      "types": "./es6/Prism.d.ts"
+    },
+    "./Traversal": {
+      "import": "./es6/Traversal.js",
+      "require": "./lib/Traversal.js",
+      "types": "./es6/Traversal.d.ts"
+    }
   },
   "author": "Giulio Canti <giulio.canti@gmail.com>",
   "license": "MIT",

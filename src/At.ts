@@ -13,9 +13,9 @@ import { pipe } from 'fp-ts-esm/pipeable'
 import * as RM from 'fp-ts-esm/ReadonlyMap'
 import { ReadonlyRecord } from 'fp-ts-esm/ReadonlyRecord'
 import * as RS from 'fp-ts-esm/ReadonlySet'
-import * as _ from './internal'
-import { Iso } from './Iso'
-import { Lens } from './Lens'
+import * as _ from './internal.js'
+import { Iso } from './Iso.js'
+import { Lens } from './Lens.js'
 
 import Option = O.Option
 
