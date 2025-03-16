@@ -1,5 +1,5 @@
 {
-  "name": "monocle-ts",
+  "name": "monocle-ts-esm",
   "version": "2.3.13",
   "description": "A porting of scala monocle library to TypeScript",
   "main": "lib/index.js",
